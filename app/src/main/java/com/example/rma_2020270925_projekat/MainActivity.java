@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(i);
                         finish();
                     } else {
-                        Toast.makeText(MainActivity.this, "Prijava neuspesna! Pokusajte ponovo. Ako nemate nalog registrujte se", Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity.this, "Prijava neuspesna! Pokusajte ponovo. Ako nemate nalog registrujte se.", Toast.LENGTH_LONG).show();
                     }
                 }
 
