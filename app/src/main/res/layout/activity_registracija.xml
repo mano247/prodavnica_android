@@ -103,6 +103,6 @@
             android:layout_marginLeft="5dp"
             android:layout_weight="1"
             android:text="Odustani"
-            app:backgroundTint="#2196F3" />
+            app:backgroundTint="#F44336" />
     </LinearLayout>
 </LinearLayout>
