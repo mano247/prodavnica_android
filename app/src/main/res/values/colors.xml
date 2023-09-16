@@ -4,4 +4,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="dugme_svi_proizvodi">#009688</color>
     <color name="dugme_kategorija">#DDDD00</color>
+    <color name="kategorija">#2196F3</color>
+    <color name="svi_proizvodi">#F44336</color>
 </resources>

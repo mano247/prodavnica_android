@@ -40,21 +40,25 @@ public class MainActivity extends AppCompatActivity {
                 String unetoKorisnickoIme = korisnickoIme.getText().toString();
                 String unetaLozinka = lozinka.getText().toString();
 
-                boolean uspesnaPrijava = false;
+                if (unetoKorisnickoIme.isEmpty() || unetaLozinka.isEmpty()) {
+                    Toast.makeText(MainActivity.this, "Unesite sve podatke.", Toast.LENGTH_SHORT).show();
+                } else {
+                    boolean uspesnaPrijava = false;
 
-                for (Korisnik k : korisnici){
-                    if (unetoKorisnickoIme.equals(k.getKorisnickoIme()) && unetaLozinka.equals(k.getLozinka())){
-                        uspesnaPrijava = true;
-                        break;
+                    for (Korisnik k : korisnici) {
+                        if (unetoKorisnickoIme.equals(k.getKorisnickoIme()) && unetaLozinka.equals(k.getLozinka())) {
+                            uspesnaPrijava = true;
+                            break;
+                        }
                     }
-                }
 
-                if (uspesnaPrijava){
-                    Toast.makeText(MainActivity.this, "Prijava uspesna!", Toast.LENGTH_SHORT).show();
-                    startActivity(i);
-                    finish();
-                }else{
-                    Toast.makeText(MainActivity.this, "Prijava neuspesna! Pokusajte ponovo.", Toast.LENGTH_SHORT).show();
+                    if (uspesnaPrijava) {
+                        Toast.makeText(MainActivity.this, "Prijava uspesna!", Toast.LENGTH_SHORT).show();
+                        startActivity(i);
+                        finish();
+                    } else {
+                        Toast.makeText(MainActivity.this, "Prijava neuspesna! Pokusajte ponovo. Ako nemate nalog registrujte se", Toast.LENGTH_LONG).show();
+                    }
                 }
 
             }

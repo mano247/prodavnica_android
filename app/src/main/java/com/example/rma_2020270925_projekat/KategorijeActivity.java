@@ -45,7 +45,7 @@ public class KategorijeActivity extends AppCompatActivity {
 
         for (Proizvod.Kategorije k : kategorije){
             Button kategorijaDugme = new Button(this);
-            kategorijaDugme.setBackgroundColor(ContextCompat.getColor(this, R.color.dugme_kategorija));
+            kategorijaDugme.setBackgroundColor(ContextCompat.getColor(this, R.color.kategorija));
             String kategorijaIme = k.name().replace("_", " ");
             kategorijaDugme.setText(kategorijaIme);
 
@@ -65,7 +65,7 @@ public class KategorijeActivity extends AppCompatActivity {
 
         Button sviProizvodi = new Button(this);
         sviProizvodi.setText("SVI PROIZVODI");
-        sviProizvodi.setBackgroundColor(ContextCompat.getColor(this, R.color.dugme_svi_proizvodi));
+        sviProizvodi.setBackgroundColor(ContextCompat.getColor(this, R.color.svi_proizvodi));
         sviProizvodi.setTextColor(ContextCompat.getColor(this, R.color.white));
         sviProizvodi.setOnClickListener(new View.OnClickListener() {
             @Override
