@@ -69,8 +69,6 @@ public class PrikazProizvoda extends AppCompatActivity {
     }
 
     public void generisiProizvode(){
-        LinearLayout subLayout;
-        TextView id, naziv, proizvodjac, kategorija, cena, kolicina;
         ProizvodiDatabaseHelper proizvodiDatabaseHelper = new ProizvodiDatabaseHelper(this);
         List<Proizvod> proizvodi = null;
         if (naslov.equals("Proizvodi")) {
