@@ -108,7 +108,7 @@ public class DodajProizvod extends AppCompatActivity {
         odustani.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String naslov = "Proizvodi";
+//                String naslov = "Proizvodi";
                 i.putExtra("naslov", naslov);
                 startActivity(i);
                 finish();

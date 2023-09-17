@@ -26,6 +26,7 @@ public class IzmenaProizvoda extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_izmena_proizvoda);
 
+        naslov = getIntent().getStringExtra("naslov");
 
         odustaniOdIzmene = findViewById(R.id.izmena_odustani);
         izmeniProizvod = findViewById(R.id.izmeni_proizvod_dugme);
@@ -120,7 +121,7 @@ public class IzmenaProizvoda extends AppCompatActivity {
                 dbHelper.izmeniProizvod(noviProizvod);
 
                 i = new Intent(IzmenaProizvoda.this, PrikazProizvoda.class);
-                String naslov = novaKategorijaString;
+//                String naslov = novaKategorijaString;
                 i.putExtra("naslov", naslov);
                 startActivity(i);
                 Toast.makeText(IzmenaProizvoda.this, "Proizvod uspesno izmenjen.", Toast.LENGTH_SHORT).show();
@@ -135,7 +136,7 @@ public class IzmenaProizvoda extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 i = new Intent(IzmenaProizvoda.this, PrikazProizvoda.class);
-                String naslov = "Proizvodi";
+//                String naslov = "Proizvodi";
                 i.putExtra("naslov", naslov);
                 startActivity(i);
                 finish();
